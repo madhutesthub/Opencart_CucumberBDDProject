@@ -22,41 +22,64 @@ This project is a Behavior-Driven Development (BDD) automation framework for tes
 
 ## 📁 Project Structure
 
-opencart_cucumber_bdd/
-├── src/
-│ ├── test/
-│ │ ├── java/
-│ │ │ ├── factory/
-│ │ │ │ └── BaseClass.java
-│ │ │ ├── pageObjects/
-│ │ │ │ ├── LoginPage.java
-│ │ │ │ ├── RegistrationPage.java
-│ │ │ │ └── (Other page classes)
-│ │ │ ├── stepDefinitions/
-│ │ │ │ ├── LoginSteps.java
-│ │ │ │ └── RegistrationSteps.java
-│ │ │ └── testRunner/
-│ │ │ └── TestRunner.java
-│ │ └── resources/
-│ │ ├── config.properties
-│ │ ├── extent.properties
-│ │ └── log4j2.xml
-│
-├── Features/
-│ ├── Login.feature
-│ ├── LoginDDTExcel.feature
-│ └── Registration.feature
-│
-├── testData/
-│ └── Opencart_LoginData.xlsx
-│
-├── test-output/
-│ └── SparkReport_TIMESTAMP/
-│
-├── run.bat
-├── pom.xml
-└── README.md
+### 📂 src/test/java
 
+- 📁 factory  
+  - `BaseClass.java` – WebDriver setup and base utilities
+
+- 📁 pageObjects  
+  - `LoginPage.java`  
+  - `RegistrationPage.java`  
+  - `AccountRegistrationPage.java`  
+  - `CheckoutPage.java`  
+  - `HomePage.java`  
+  - `MyAccountPage.java`  
+  - `SearchPage.java`  
+  - `ShoppingCartPage.java`  
+
+- 📁 stepDefinitions  
+  - `Hooks.java` – Setup/Teardown methods  
+  - `LoginSteps.java` – Step definitions for login  
+  - `RegistrationSteps.java` – Step definitions for registration
+
+- 📁 testRunner  
+  - `TestRunner.java` – Executes feature files with JUnit
+
+---
+
+### 📂 src/test/resources
+
+- `config.properties` – App URLs, credentials, and config values  
+- `extent.properties` – Extent Report configuration  
+- `log4j2.xml` – Logging configuration file
+
+---
+
+### 📂 Features
+
+- `Login.feature` – Basic login scenario  
+- `LoginDDTExcel.feature` – Login with data-driven test  
+- `Registration.feature` – User registration scenario
+
+---
+
+### 📂 testData
+
+- `Opencart_LoginData.xlsx` – Test input data for login
+
+---
+
+### 📂 test-output
+
+- `SparkReport_<timestamp>/` – Auto-generated Spark/Extent reports
+
+---
+
+### 📦 Other Root Files
+
+- `run.bat` – Batch file to run tests via CMD  
+- `pom.xml` – Maven build and dependency file  
+- `README.md` – Project overview (this file)
 ---
 
 ## ✅ Features Automated
