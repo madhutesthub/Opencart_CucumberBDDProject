@@ -26,39 +26,36 @@ opencart_cucumber_bdd/
 ├── src/
 │ ├── test/
 │ │ ├── java/
-│ │ │ ├── factory/ # Base class for WebDriver setup
+│ │ │ ├── factory/
 │ │ │ │ └── BaseClass.java
-│ │ │ ├── pageObjects/ # Page Object Model (POM) classes
+│ │ │ ├── pageObjects/
 │ │ │ │ ├── LoginPage.java
 │ │ │ │ ├── RegistrationPage.java
 │ │ │ │ └── (Other page classes)
-│ │ │ ├── stepDefinitions/ # Cucumber step definitions
+│ │ │ ├── stepDefinitions/
 │ │ │ │ ├── LoginSteps.java
 │ │ │ │ └── RegistrationSteps.java
-│ │ │ └── testRunner/ # Test runner for Cucumber features
+│ │ │ └── testRunner/
 │ │ │ └── TestRunner.java
 │ │ └── resources/
-│ │ ├── config.properties # Environment configuration
-│ │ ├── extent.properties # Extent report configuration
-│ │ └── log4j2.xml # Log4j logging setup
+│ │ ├── config.properties
+│ │ ├── extent.properties
+│ │ └── log4j2.xml
 │
-├── Features/ # Cucumber feature files
+├── Features/
 │ ├── Login.feature
 │ ├── LoginDDTExcel.feature
 │ └── Registration.feature
 │
-├── testData/ # Excel data for DDT
+├── testData/
 │ └── Opencart_LoginData.xlsx
 │
-├── test-output/ # Test execution reports
+├── test-output/
 │ └── SparkReport_TIMESTAMP/
 │
-├── run.bat # Windows batch file to execute tests
-├── pom.xml # Maven configuration file
-└── README.md # Project overview (this file)
-
-Copy
-Edit
+├── run.bat
+├── pom.xml
+└── README.md
 
 ---
 
