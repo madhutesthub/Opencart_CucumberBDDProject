@@ -22,27 +22,43 @@ This project is a Behavior-Driven Development (BDD) automation framework for tes
 
 ## 📁 Project Structure
 
-src/test/java/
-├── factory/ # Base class for WebDriver setup
-├── pageObjects/ # POM classes for application pages
-├── stepDefinitions/ # Step definitions for Cucumber scenarios
-├── testRunner/ # TestRunner for executing Cucumber features
+opencart_cucumber_bdd/
+├── src/
+│ ├── test/
+│ │ ├── java/
+│ │ │ ├── factory/ # Base class for WebDriver setup
+│ │ │ │ └── BaseClass.java
+│ │ │ ├── pageObjects/ # Page Object Model (POM) classes
+│ │ │ │ ├── LoginPage.java
+│ │ │ │ ├── RegistrationPage.java
+│ │ │ │ └── (Other page classes)
+│ │ │ ├── stepDefinitions/ # Cucumber step definitions
+│ │ │ │ ├── LoginSteps.java
+│ │ │ │ └── RegistrationSteps.java
+│ │ │ └── testRunner/ # Test runner for Cucumber features
+│ │ │ └── TestRunner.java
+│ │ └── resources/
+│ │ ├── config.properties # Environment configuration
+│ │ ├── extent.properties # Extent report configuration
+│ │ └── log4j2.xml # Log4j logging setup
+│
+├── Features/ # Cucumber feature files
+│ ├── Login.feature
+│ ├── LoginDDTExcel.feature
+│ └── Registration.feature
+│
+├── testData/ # Excel data for DDT
+│ └── Opencart_LoginData.xlsx
+│
+├── test-output/ # Test execution reports
+│ └── SparkReport_TIMESTAMP/
+│
+├── run.bat # Windows batch file to execute tests
+├── pom.xml # Maven configuration file
+└── README.md # Project overview (this file)
 
-src/test/resources/
-├── config.properties # Configuration file for environment settings
-├── extent.properties # Report configurations
-├── log4j2.xml # Logging configuration
-
-Features/
-├── Login.feature
-├── LoginDDTExcel.feature
-├── Registration.feature
-
-testData/
-├── Opencart_LoginData.xlsx # Test data for data-driven testing
-
-test-output/
-├── SparkReport_TIMESTAMP/ # Execution reports
+Copy
+Edit
 
 ---
 
